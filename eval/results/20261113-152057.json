@@ -1,0 +1,22 @@
+{
+  "time": "2026-11-13T13:20:53.621380+00:00",
+  "doc_id": "4f0f8961d38a72d8",
+  "k": 5,
+  "n_questions": 42,
+  "stores": {
+    "numpy": {
+      "recall@3": 0.941,
+      "recall@5": 0.971,
+      "mrr": 0.86,
+      "p95_ms": 0.03,
+      "agreement_vs_numpy": null
+    },
+    "chroma": {
+      "recall@3": 0.941,
+      "recall@5": 0.971,
+      "mrr": 0.86,
+      "p95_ms": 1.18,
+      "agreement_vs_numpy": 1.0
+    }
+  }
+}

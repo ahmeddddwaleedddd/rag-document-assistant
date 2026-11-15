@@ -1,0 +1,33 @@
+Metadata-Version: 2.4
+Name: rag-document-assistant
+Version: 0.2.0
+Summary: Chat with a PDF: cited answers or an honest refusal, with measured retrieval.
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: anthropic>=0.70
+Requires-Dist: voyageai>=0.3
+Requires-Dist: pypdf>=5.0
+Requires-Dist: numpy>=1.26
+Requires-Dist: pydantic>=2.7
+Requires-Dist: python-dotenv>=1.0
+Requires-Dist: httpx>=0.27
+Requires-Dist: jiter>=0.5
+Requires-Dist: langgraph>=1.0
+Provides-Extra: chroma
+Requires-Dist: chromadb>=1.0; extra == "chroma"
+Provides-Extra: pg
+Requires-Dist: psycopg[binary]>=3.1; extra == "pg"
+Requires-Dist: pgvector>=0.3; extra == "pg"
+Provides-Extra: api
+Requires-Dist: fastapi>=0.135; extra == "api"
+Requires-Dist: uvicorn[standard]>=0.30; extra == "api"
+Requires-Dist: python-multipart>=0.0.9; extra == "api"
+Provides-Extra: ui
+Requires-Dist: streamlit>=1.40; extra == "ui"
+Requires-Dist: httpx>=0.27; extra == "ui"
+Provides-Extra: dev
+Requires-Dist: pytest>=8; extra == "dev"
+Requires-Dist: ruff>=0.6; extra == "dev"
+Requires-Dist: httpx>=0.27; extra == "dev"
+Provides-Extra: all
+Requires-Dist: rag-document-assistant[api,chroma,dev,pg,ui]; extra == "all"
