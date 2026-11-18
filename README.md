@@ -4,7 +4,7 @@ Upload a long, messy document and ask questions in plain language. The assistant
 
 ![Demo](docs/demo.gif)
 
-**Demo video (about 100 seconds, captions only):** [watch on YouTube](https://www.youtube.com/watch?v=cej6HJIf0Eg)
+**Demo video (captions only):** [watch on YouTube](https://www.youtube.com/watch?v=cej6HJIf0Eg)
 
 Built as a demonstration of production-grade RAG practices: a swappable vector store abstraction (NumPy / Chroma / pgvector), measured retrieval quality, LLM-as-fallback query rewriting, and a FastAPI + Streamlit frontend — all validated end-to-end for free using local Ollama models, with a one-line switch to production-grade Voyage embeddings + Claude.
 
