@@ -11,3 +11,10 @@ data/uploads/
 __pycache__/
 *.pyc
 .DS_Store
+# Local video media (raw takes, CapCut project, exported video). Only
+# docs/demo.gif (and docs/demo.png if used) are published; the full
+# video lives on YouTube.
+/Media/
+*.mp4
+*.mkv
+*.mov

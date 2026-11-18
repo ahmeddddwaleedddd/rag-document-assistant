@@ -2,6 +2,10 @@
 
 Upload a long, messy document and ask questions in plain language. The assistant answers **only from the document**, **shows exactly which page each answer came from**, and **says "I couldn't find that in the document"** when the answer isn't there.
 
+![Demo](docs/demo.gif)
+
+**Demo video (about 100 seconds, captions only):** [watch on YouTube](https://www.youtube.com/watch?v=cej6HJIf0Eg)
+
 Built as a demonstration of production-grade RAG practices: a swappable vector store abstraction (NumPy / Chroma / pgvector), measured retrieval quality, LLM-as-fallback query rewriting, and a FastAPI + Streamlit frontend — all validated end-to-end for free using local Ollama models, with a one-line switch to production-grade Voyage embeddings + Claude.
 
 ## Results
@@ -95,6 +99,12 @@ Then:
 rag-assistant data/doc.pdf --store chroma --debug
 ```
 
+## Try it
+
+Prefer a UI? Start the Streamlit app, upload a PDF in the sidebar, and ask away.
+
+![Streamlit UI](docs/demo.png)
+
 ## What's in the box
 
 - **CLI** (`rag-assistant`) — chat with one PDF from the terminal, with `--debug`, `--stream`, `--page` filtering, and backend selection
@@ -103,6 +113,7 @@ rag-assistant data/doc.pdf --store chroma --debug
 - **Eval harness** — recall@k, MRR, ANN-vs-brute-force agreement, refusal accuracy, all computed from one shared embedding pass so results are comparable across backends
 - **Retry loop** (LangGraph) — a weak first retrieval triggers one query rewrite before falling back to refusal
 - **Tests** — fully offline, fake embeddings and fake LLM clients, zero cost to run in CI
+- **Docs** — `docs/architecture.md` (architecture write-up) and `docs/demo.gif` / `docs/demo.png` (demo assets)
 
 ## Tech stack
 
